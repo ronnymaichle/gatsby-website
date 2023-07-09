@@ -46,12 +46,5 @@ module.exports = {
       },
       __key: "data",
     },
-    {
-      resolve: `gatsby-plugin-remote-images`,
-      options: {
-        nodeType: "InjuriesJson",
-        imagePath: "injuriesJson.injuries.anatomy_of_the_structure",
-      },
-    },
   ],
 };
