@@ -72,7 +72,7 @@ export default function Layout({ children }) {
       <div className="middle_part">
         <aside
           ref={asideRef}
-          className="transition-transform ease-in duration-200 translate-x-0 "
+          className="transition-transform ease-in duration-200 translate-x-0 z-50"
         >
           <Sidebar toggleAside={toggleAside} />
         </aside>

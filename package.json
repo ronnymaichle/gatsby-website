@@ -17,6 +17,8 @@
   "dependencies": {
     "@mdx-js/react": "^2.3.0",
     "autoprefixer": "^10.4.14",
+    "flowbite": "^1.7.0",
+    "flowbite-react": "^0.4.10",
     "gatsby": "^5.11.0",
     "gatsby-plugin-image": "^3.11.0",
     "gatsby-plugin-manifest": "^5.11.0",
