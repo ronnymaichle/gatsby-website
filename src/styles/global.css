@@ -1,3 +1,105 @@
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  /* margin: 10;
+  padding: 0;
+  text-decoration: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: white; */
+  font-family: monospace;
+}
+html,
+body {
+  /* min-height: 100%; */
+}
+body {
+  background: radial-gradient(
+    at top left,
+    rgba(146, 43, 20, 1) 0%,
+    rgba(43, 9, 107, 1) 100%
+  );
+  background-repeat: no-repeat;
+}
+p {
+  margin: 16px auto;
+  line-height: 1.5em;
+}
+
+/* layout & nav */
+/* .layout {
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+/*************/
+.layout {
+  @apply flex flex-col h-screen w-screen;
+}
+
+nav {
+  @apply bg-emerald-800 p-2 flex flex-row;
+  /* grid-template-columns: auto 1fr; */
+}
+
+header {
+  @apply bg-gray-500;
+}
+
+.middle_part {
+  @apply border-y-orange-600 flex flex-row  w-full h-full relative;
+  /* height: calc(100vh - var(--header-height)); */
+}
+.__aside-button {
+  @apply w-[70px] lg:hidden;
+}
+aside {
+  @apply bg-violet-400 absolute h-full lg:relative  lg:flex;
+}
+.__sidebar {
+  @apply bg-emerald-600 px-2 pb-2 min-w-fit h-full overflow-y-auto;
+}
+
+main {
+  @apply bg-emerald-300 flex flex-1 overflow-auto;
+}
+/*************/
+
+/* footer {
+  @apply bg-red-700;
+} */
+
+/* nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 10px 10px;
+  border-width: 1px;
+} */
+/* nav .links {
+  display: inline-block;
+  text-align: right;
+} */
+/* nav a {
+  display: inline-block;
+  margin-left: 20px;
+  font-weight: 400;
+  padding-bottom: 8px;
+  border-bottom: 3px solid transparent;
+}
+nav a:hover {
+  border-color: white;
+} */
+
+/* footer p {
+  text-align: center;
+  color: #bbb;
+  margin: 40px auto;
+} */
+
+/* 
+.hero {
+    @apply flex  flex-col gap-5 relative z-0 max-w-[1440px] mx-auto;
+  } */
