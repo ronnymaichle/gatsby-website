@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 
 export default function Navbar({ asideRef }) {
   const breakpointRef = useRef(false);
@@ -18,6 +19,14 @@ export default function Navbar({ asideRef }) {
     if (asideRef && asideRef.current) {
       const asideElement = asideRef.current;
       asideElement.classList.toggle("hidden");
+    }
+  }
+
+  function hideAside() {
+    if (asideRef && asideRef.current) {
+      const asideElement = asideRef.current;
+      if (asideElement.classList.contains("hidden"))
+        asideElement.classList.add("hidden");
     }
   }
 
@@ -41,15 +50,19 @@ export default function Navbar({ asideRef }) {
 
   return (
     <nav>
-      <button className="__aside-button" onClick={handleAsideButton}>
-        <span class="material-icons align-middle">menu</span>
-      </button>
+      <div>
+        <button className="__aside-button" onClick={handleAsideButton}>
+          <span class="material-icons align-middle">menu</span>
+        </button>
+      </div>
       <h1 className="text-xl text-white lg:ml-8">{title}</h1>
       {/* grid-template-columns: auto 1fr; */}
-      {/* <div className="links">
+      <div className="links">
         <Link to="/"> Home</Link>
-        <Link to="/about"> About</Link>
-      </div> */}
+        <Link onClick={() => hideAside()} to="/about">
+          About
+        </Link>
+      </div>
     </nav>
   );
 }

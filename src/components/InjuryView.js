@@ -29,16 +29,7 @@ export const InjuryView = () => {
   }, [selectedMenu, data]);
 
   if (!selectedMenu.injuryName) {
-    return (
-      <div className="bg-slate-500 flex flex-1  ">
-        <div className="bg-white flex-1 flex-col m-2 rounded">
-          <div className="flex-1 text-center">
-            <span class="material-icons text-9xl">&#xE87C;</span>
-            <h1 className="font-thin text-2xl"> First Name</h1>
-          </div>
-        </div>
-      </div>
-    );
+    return <></>;
   } else {
     return (
       <div className=" p-6 bg-white flex-1 rounded shadow overflow-y-auto">

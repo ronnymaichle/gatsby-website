@@ -1,15 +1,22 @@
-//rfce
-
 import React from "react";
 import Layout from "../components/Layout";
+
+import { MenuProvider } from "../components/MenuContext";
+
 function About() {
   return (
-    <Layout>
-      <div>
-        <h1>About page</h1>
-        <p>Lorem ipsum dolor</p>
-      </div>
-    </Layout>
+    <MenuProvider>
+      <Layout>
+        <div className="bg-white flex flex-1  ">
+          <div className="bg-white flex-1 flex-col m-2 rounded">
+            <div className="flex-1 text-center">
+              <span class="material-icons text-9xl">&#xE87C;</span>
+              <h1 className="font-thin text-2xl"> An about me page.</h1>
+            </div>
+          </div>
+        </div>
+      </Layout>
+    </MenuProvider>
   );
 }
 

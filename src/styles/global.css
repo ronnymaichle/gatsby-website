@@ -72,26 +72,28 @@ main {
   @apply bg-red-700;
 } */
 
-/* nav {
+nav {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  margin: 10px 10px;
-  border-width: 1px;
-} */
-/* nav .links {
+  grid-template-columns: 80px 1fr 1fr;
+  /* border-width: 1px; */
+}
+nav .links {
   display: inline-block;
   text-align: right;
-} */
-/* nav a {
+}
+nav a {
   display: inline-block;
   margin-left: 20px;
-  font-weight: 400;
-  padding-bottom: 8px;
-  border-bottom: 3px solid transparent;
+  margin-right: 10px;
+  font-weight: 500;
+  font-family: monospace;
+  font-size: large;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
 }
 nav a:hover {
   border-color: white;
-} */
+}
 
 /* footer p {
   text-align: center;
