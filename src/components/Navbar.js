@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Link } from "gatsby";
 
-export default function Navbar({ asideRef }) {
+export default function Navbar({ asideRef, asideButton }) {
   const breakpointRef = useRef(false);
   const data = useStaticQuery(graphql`
     query SiteInfo {
@@ -51,7 +51,11 @@ export default function Navbar({ asideRef }) {
   return (
     <nav>
       <div>
-        <button className="__aside-button" onClick={handleAsideButton}>
+        <button
+          ref={asideButton}
+          className="__aside-button"
+          onClick={handleAsideButton}
+        >
           <span class="material-icons align-middle">menu</span>
         </button>
       </div>

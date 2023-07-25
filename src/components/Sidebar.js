@@ -1,11 +1,12 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { MenuContext } from "./MenuContext";
-
+import { Link } from "gatsby";
 const SidebarSubmenu = ({ injuries, bodypartName, toggleAside }) => {
   const { setSelectedMenu } = useContext(MenuContext);
 
   function handleClick(bodypartName, injuryName) {
+    //console.log(injuryName);
     setSelectedMenu({ bodypartName: bodypartName, injuryName: injuryName });
     toggleAside();
   }
@@ -15,18 +16,20 @@ const SidebarSubmenu = ({ injuries, bodypartName, toggleAside }) => {
   //     bodypartName: bodypartName,
   //     injuryName: injuries[0].name,
   //   });
-  // });
+  // }, []);
 
   return (
-    <ul className="bg-emerald-500 mx-2 py-2 rounded">
+    <ul className="bg-emerald-500 mx-2  rounded">
       {injuries.map((injury) => {
         return (
-          <li
-            className="pl-2 pr-2 text-sm text-slate-950 hover:bg-emerald-400"
-            key={bodypartName + "/" + injury.name}
-            onClick={() => handleClick(bodypartName, injury.name)}
-          >
-            {injury.name}
+          <li className="pl-2 pr-2 text-sm text-slate-950 py-1 hover:bg-emerald-400">
+            <Link
+              key={bodypartName + "/" + injury.name}
+              to="/"
+              onClick={() => handleClick(bodypartName, injury.name)}
+            >
+              {injury.name}
+            </Link>
           </li>
         );
       })}
@@ -58,7 +61,6 @@ export const Sidebar = ({ toggleAside }) => {
 
   const bodyparts = data.allInjuriesJson.edges;
   setData(bodyparts);
-  //   console.log(data.allInjuriesJson.edges);
 
   return (
     <div className="__sidebar">
@@ -67,7 +69,7 @@ export const Sidebar = ({ toggleAside }) => {
           return (
             <>
               <li
-                className="my-1 pr-2 text-base text-slate-950 "
+                className="my-1 pr-2 mt-1 text-base text-slate-950 "
                 key={bodypart.node.bodypart_name}
               >
                 {bodypart.node.bodypart_name}

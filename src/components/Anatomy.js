@@ -2,7 +2,7 @@ import React from "react";
 import { Carousel } from "flowbite-react";
 export const Anatomy = () => {
   return (
-    <Carousel slide={false} className="w-full h-[300px] z-0">
+    <Carousel slide={false} className="h-[300px] ">
       <img
         alt="..."
         className="w-[200px]"

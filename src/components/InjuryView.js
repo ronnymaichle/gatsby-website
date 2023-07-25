@@ -60,6 +60,8 @@ export const InjuryView = () => {
 
   useEffect(() => {
     if (data) {
+      console.log("\nFROM ABOUT: ", selectedMenu.injuryName);
+
       const matchedElement = data.find((item) => {
         return (
           item.node.bodypart_name === selectedMenu.bodypartName &&
@@ -80,6 +82,7 @@ export const InjuryView = () => {
       }
     }
   }, [selectedMenu, data]);
+
   const lorem = (title) => {
     return (
       <>
@@ -117,9 +120,11 @@ export const InjuryView = () => {
           {injury?.name}
         </h1>
         <br />
-        <div className=" flex-col flex-1 items-center text-center justify-center">
+        <div className=" flex-col flex-1  text-center content-center ">
           <h1 className="text-black font-serif text-3xl mb-1">Anatomy</h1>
+
           <Anatomy />
+
           {/* <img
             className={"w-[300px] my-4"}
             src={injury?.anatomy_of_the_structure}

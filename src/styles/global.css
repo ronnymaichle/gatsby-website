@@ -12,10 +12,7 @@
   color: white; */
   font-family: monospace;
 }
-html,
-body {
-  /* min-height: 100%; */
-}
+
 body {
   background: radial-gradient(
     at top left,
@@ -54,7 +51,7 @@ header {
   /* height: calc(100vh - var(--header-height)); */
 }
 .__aside-button {
-  @apply w-[70px] lg:hidden;
+  @apply w-[70px]  lg:hidden;
 }
 aside {
   @apply bg-violet-400 absolute h-full lg:relative  lg:flex;
