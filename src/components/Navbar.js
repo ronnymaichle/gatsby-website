@@ -63,9 +63,7 @@ export default function Navbar({ asideRef, asideButton }) {
       <h1 className="text-xl text-white lg:ml-8">{title}</h1>
       {/* grid-template-columns: auto 1fr; */}
       <div className="links">
-        <Link onClick={() => hideAside()} to="/about">
-          About
-        </Link>
+        <Link to="/about">About</Link>
         <Link to="/"> Home</Link>
       </div>
     </nav>

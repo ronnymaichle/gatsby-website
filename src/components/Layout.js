@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import Navbar from "./Navbar";
 // import { graphql, useStaticQuery } from "gatsby";
 import { Sidebar } from "./Sidebar";
