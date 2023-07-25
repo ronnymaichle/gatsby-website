@@ -1,13 +1,13 @@
 import React, { useRef, useEffect } from "react";
 import Navbar from "./Navbar";
 // import { graphql, useStaticQuery } from "gatsby";
-
 import { Sidebar } from "./Sidebar";
 import "../styles/global.css";
 
 export default function Layout({ children }) {
   const asideRef = useRef(null);
   const asideButtonRef = useRef(null);
+  const [windowWidth, setWindowWidth] = useState(0);
   // const data = useStaticQuery(graphql`
   //   query SiteTitleQuery {
   //     site {
@@ -48,6 +48,7 @@ export default function Layout({ children }) {
         asideRef.current.classList.add("hidden");
       }
     };
+    setWindowWidth(window.innerWidth);
     // Add event listeners
     window.addEventListener("click", handleOutsideClick);
     window.addEventListener("keydown", handleEscapeKey);
@@ -60,7 +61,7 @@ export default function Layout({ children }) {
 
   return (
     <div className="layout">
-      {/* <title>AT Website</title> */}
+      <title>AT Website</title>
       {/* <title>{data.site.siteMetadata?.title || `Title`}</title> */}
 
       <Navbar asideRef={asideRef} asideButton={asideButtonRef} />
@@ -68,7 +69,7 @@ export default function Layout({ children }) {
       <div className="middle_part">
         <aside
           ref={asideRef}
-          className={window.innerWidth < 1024 ? "hidden z-50" : "z-50"}
+          className={windowWidth < 1024 ? "hidden z-50" : "z-50"}
         >
           <Sidebar toggleAside={toggleAside} />
         </aside>

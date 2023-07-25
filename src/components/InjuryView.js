@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { MenuContext } from "./MenuContext";
-import { Anatomy } from "./Anatomy";
+// import { Anatomy } from "./Anatomy";
 import { Tabs } from "flowbite-react";
 
 const customTheme = {
@@ -177,26 +177,19 @@ export const InjuryView = () => {
             {lorem("Clinical Presentation")}
           </Tabs.Item>
           <Tabs.Item title="Anatomy">
+            <br />
             <img
               alt="..."
               className="w-[200px]"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg/640px-Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg"
-            />{" "}
+            />
+            <br />
             <img
               alt="..."
               className="w-[200px]"
               src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg/640px-Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg"
-            />{" "}
-            <img
-              alt="..."
-              className="w-[200px]"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg/640px-Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg"
-            />{" "}
-            <img
-              alt="..."
-              className="w-[200px]"
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg/640px-Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg"
-            />{" "}
+            />
+            <br />
             <img
               alt="..."
               className="w-[200px]"

@@ -1,5 +1,5 @@
 import "./src/styles/global.css";
-import "bootstrap/dist/js/bootstrap.min.js";
+// import "bootstrap/dist/js/bootstrap.min.js";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 import React from "react";
