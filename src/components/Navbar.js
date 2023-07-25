@@ -56,7 +56,7 @@ export default function Navbar({ asideRef, asideButton }) {
           className="__aside-button"
           onClick={handleAsideButton}
         >
-          <span class="material-icons align-middle">menu</span>
+          <span className="material-icons align-middle">menu</span>
         </button>
       </div>
 

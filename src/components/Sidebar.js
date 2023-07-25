@@ -22,15 +22,14 @@ const SidebarSubmenu = ({ injuries, bodypartName, toggleAside }) => {
     <ul className="bg-emerald-500 mx-2  rounded">
       {injuries.map((injury) => {
         return (
-          <li className="pl-2 pr-2 text-sm text-slate-950 py-1 hover:bg-emerald-400">
-            <Link
-              key={bodypartName + "/" + injury.name}
-              to="/"
-              onClick={() => handleClick(bodypartName, injury.name)}
-            >
-              {injury.name}
-            </Link>
-          </li>
+          <Link
+            onClick={() => handleClick(bodypartName, injury.name)}
+            className="pl-2 flex pr-2 text-sm text-slate-950 py-1 hover:bg-emerald-400"
+            key={bodypartName + "/" + injury.name}
+            to="/"
+          >
+            {injury.name}
+          </Link>
         );
       })}
     </ul>
@@ -67,7 +66,7 @@ export const Sidebar = ({ toggleAside }) => {
       <ul className="">
         {bodyparts.map((bodypart) => {
           return (
-            <>
+            <React.Fragment key={"_" + bodypart.node.bodypart_name}>
               <li
                 className="my-1 pr-2 mt-1 text-base text-slate-950 "
                 key={bodypart.node.bodypart_name}
@@ -79,7 +78,7 @@ export const Sidebar = ({ toggleAside }) => {
                 bodypartName={bodypart.node.bodypart_name}
                 toggleAside={toggleAside}
               />
-            </>
+            </React.Fragment>
           );
         })}
       </ul>
