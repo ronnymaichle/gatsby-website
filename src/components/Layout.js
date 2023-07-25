@@ -60,10 +60,11 @@ export default function Layout({ children }) {
 
   return (
     <div className="layout">
+      {/* <title>AT Website</title> */}
       {/* <title>{data.site.siteMetadata?.title || `Title`}</title> */}
-      <header>
-        <Navbar asideRef={asideRef} asideButton={asideButtonRef} />
-      </header>
+
+      <Navbar asideRef={asideRef} asideButton={asideButtonRef} />
+
       <div className="middle_part">
         <aside
           ref={asideRef}

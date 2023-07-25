@@ -103,7 +103,37 @@ export const InjuryView = () => {
           sit. Libero enim sed faucibus turpis in. Mi tempus imperdiet nulla
           malesuada pellentesque elit eget gravida cum. Eget nulla facilisi
           etiam dignissim diam quis. Nunc non blandit massa enim. Ornare massa
-          eget egestas purus.
+          eget egestas purus. Lorem ipsum dolor sit amet, consectetur adipiscing
+          elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+          aliqua. Dui ut ornare lectus sit amet est. Purus in massa tempor nec
+          feugiat. Dui vivamus arcu felis bibendum ut tristique et. Nunc mattis
+          enim ut tellus elementum sagittis vitae. Lectus urna duis convallis
+          convallis tellus id interdum. Quisque id diam vel quam elementum
+          pulvinar etiam non. Auctor urna nunc id cursus metus aliquam.
+          Elementum pulvinar etiam non quam lacus suspendisse faucibus interdum.
+          Sapien et ligula ullamcorper malesuada. Eget sit amet tellus cras
+          adipiscing enim eu turpis. Iaculis at erat pellentesque adipiscing
+          commodo elit at. Parturient montes nascetur ridiculus mus. Amet nisl
+          purus in mollis nunc sed. Scelerisque varius morbi enim nunc faucibus
+          a pellentesque sit. Libero enim sed faucibus turpis in. Mi tempus
+          imperdiet nulla malesuada pellentesque elit eget gravida cum. Eget
+          nulla facilisi etiam dignissim diam quis. Nunc non blandit massa enim.
+          Ornare massa eget egestas purus. Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Dui ut ornare lectus sit amet est.
+          Purus in massa tempor nec feugiat. Dui vivamus arcu felis bibendum ut
+          tristique et. Nunc mattis enim ut tellus elementum sagittis vitae.
+          Lectus urna duis convallis convallis tellus id interdum. Quisque id
+          diam vel quam elementum pulvinar etiam non. Auctor urna nunc id cursus
+          metus aliquam. Elementum pulvinar etiam non quam lacus suspendisse
+          faucibus interdum. Sapien et ligula ullamcorper malesuada. Eget sit
+          amet tellus cras adipiscing enim eu turpis. Iaculis at erat
+          pellentesque adipiscing commodo elit at. Parturient montes nascetur
+          ridiculus mus. Amet nisl purus in mollis nunc sed. Scelerisque varius
+          morbi enim nunc faucibus a pellentesque sit. Libero enim sed faucibus
+          turpis in. Mi tempus imperdiet nulla malesuada pellentesque elit eget
+          gravida cum. Eget nulla facilisi etiam dignissim diam quis. Nunc non
+          blandit massa enim. Ornare massa eget egestas purus.
         </p>
       </>
     );
@@ -120,16 +150,15 @@ export const InjuryView = () => {
           {injury?.name}
         </h1>
         <br />
-        <div className=" flex-col flex-1  text-center content-center ">
-          <h1 className="text-black font-serif text-3xl mb-1">Anatomy</h1>
+        {/* <div className=" flex-col flex-1  text-center content-center ">
+         */}
+        {/* <h1 className="text-black font-serif text-3xl mb-1">Anatomy</h1> */}
 
-          <Anatomy />
-
-          {/* <img
+        {/* <img
             className={"w-[300px] my-4"}
             src={injury?.anatomy_of_the_structure}
           ></img> */}
-        </div>
+        {/* </div> */}
         <br />
         <Tabs.Group
           aria-label="Pills"
@@ -138,14 +167,41 @@ export const InjuryView = () => {
           theme={customTheme}
           className="items-center"
         >
-          <Tabs.Item active title="Assessent">
-            {lorem("Assessent")}
+          <Tabs.Item active title="Assessment">
+            {lorem("Assessment")}
           </Tabs.Item>
           <Tabs.Item title="Rehabilitation">
             {lorem("Rehabilitation")}
           </Tabs.Item>
           <Tabs.Item title="Clinical Presentation">
             {lorem("Clinical Presentation")}
+          </Tabs.Item>
+          <Tabs.Item title="Anatomy">
+            <img
+              alt="..."
+              className="w-[200px]"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg/640px-Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg"
+            />{" "}
+            <img
+              alt="..."
+              className="w-[200px]"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg/640px-Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg"
+            />{" "}
+            <img
+              alt="..."
+              className="w-[200px]"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg/640px-Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg"
+            />{" "}
+            <img
+              alt="..."
+              className="w-[200px]"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg/640px-Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg"
+            />{" "}
+            <img
+              alt="..."
+              className="w-[200px]"
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg/640px-Muscles_of_the_head_and_neck%3B_an_écorché_seen_in_profile._Li_Wellcome_V0008436.jpg"
+            />
           </Tabs.Item>
         </Tabs.Group>
         {/* <h1 className="text-black font-serif text-2xl mb-1">Assessment</h1> */}
@@ -181,7 +237,7 @@ export const InjuryView = () => {
           tellus elementum sagittis vitae. Lectus urna duis convallis convallis
           tellus id interdum. Quisque id.
         </p> */}
-        .{/* <p>{injury?.rehabilitation}</p> */}
+        {/* <p>{injury?.rehabilitation}</p> */}
         {/* <p>{injury?.clinical_presentation}</p> */}
       </div>
     );

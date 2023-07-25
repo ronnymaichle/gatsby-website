@@ -3,6 +3,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* 
+@import "~bootstrap/dist/css/bootstrap.min.css"; */
 
 * {
   /* margin: 10;
@@ -38,7 +40,7 @@ p {
 }
 
 nav {
-  @apply bg-emerald-800 p-2 flex flex-row;
+  @apply bg-emerald-800 p-2 h-[44px] flex flex-row;
   /* grid-template-columns: auto 1fr; */
 }
 
@@ -47,8 +49,9 @@ header {
 }
 
 .middle_part {
-  @apply border-y-orange-600 flex flex-row  w-full h-full relative;
-  /* height: calc(100vh - var(--header-height)); */
+  /* height: calc(var(--layout-height) - var(--nav-height)); */
+  @apply border-y-orange-600 flex flex-row w-full h-full relative;
+  height: calc(100vh - 44px);
 }
 .__aside-button {
   @apply w-[70px]  lg:hidden;
@@ -75,8 +78,11 @@ nav {
   /* border-width: 1px; */
 }
 nav .links {
-  display: inline-block;
-  text-align: right;
+  display: flex;
+  flex: 1;
+  /* align-items: flex-end; */
+  direction: rtl;
+  /* text-align: right; */
 }
 nav a {
   display: inline-block;

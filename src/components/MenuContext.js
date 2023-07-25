@@ -8,7 +8,6 @@ export const MenuProvider = ({ children }) => {
     injuryName: "Whiplash",
   });
   const [data, setData] = useState([]);
-  // console.log(">>>");
 
   return (
     <MenuContext.Provider
