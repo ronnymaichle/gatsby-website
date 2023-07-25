@@ -10,12 +10,12 @@ const SidebarSubmenu = ({ injuries, bodypartName, toggleAside }) => {
     toggleAside();
   }
 
-  useEffect(() => {
-    setSelectedMenu({
-      bodypartName: bodypartName,
-      injuryName: injuries[0].name,
-    });
-  }, []);
+  // useEffect(() => {
+  //   setSelectedMenu({
+  //     bodypartName: bodypartName,
+  //     injuryName: injuries[0].name,
+  //   });
+  // });
 
   return (
     <ul className="bg-emerald-500 mx-2 py-2 rounded">
