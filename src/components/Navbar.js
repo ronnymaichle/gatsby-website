@@ -22,13 +22,13 @@ export default function Navbar({ asideRef, asideButton }) {
     }
   }
 
-  function hideAside() {
-    if (asideRef && asideRef.current) {
-      const asideElement = asideRef.current;
-      if (asideElement.classList.contains("hidden"))
-        asideElement.classList.add("hidden");
-    }
-  }
+  // function hideAside() {
+  //   if (asideRef && asideRef.current) {
+  //     const asideElement = asideRef.current;
+  //     if (asideElement.classList.contains("hidden"))
+  //       asideElement.classList.add("hidden");
+  //   }
+  // }
 
   useEffect(() => {
     const handleResize = () => {

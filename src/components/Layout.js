@@ -57,7 +57,7 @@ export default function Layout({ children }) {
       window.removeEventListener("click", handleOutsideClick);
       window.removeEventListener("keydown", handleEscapeKey);
     };
-  });
+  }, []);
 
   return (
     <div className="layout">

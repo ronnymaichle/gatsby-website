@@ -1,4 +1,4 @@
-import React from "react";
+import * as React from "react";
 import Layout from "../components/Layout";
 
 function About() {
@@ -17,3 +17,4 @@ function About() {
 }
 
 export default About;
+export const Head = () => <title>About</title>;
